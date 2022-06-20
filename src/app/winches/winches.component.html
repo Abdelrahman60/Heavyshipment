@@ -1,0 +1,68 @@
+<section class=" py-5" id="winche">
+  <div class="container py-5 content-idle">
+    <h3 class="h1 mb-5 fw-bold pt-5 text-center">Idle Cars</h3>
+    <div class="row">
+      <div class="col-md-8 col-lg-6 mx-auto">
+        <div class=" text-center item">
+          <div>
+            <img src="../../assets/images/97548eaf-28b4-4a92-967a-75c877ad433b.jpg" class=" w-100" alt="Winches">
+          </div>
+          <span class=" fs-5 fw-bold d-inline-block pt-3">Rescue Winche</span>
+        </div>
+      </div>
+    </div>
+    <div class=" small-content mt-5">
+      <h4 class="py-3">Idel Transport</h4>
+
+      <div class="row d-flex justify-content-between">
+        <mat-form-field appearance="fill" class="col-lg-5 col-md-5">
+          <mat-label>From</mat-label>
+          <mat-select>
+            <mat-option>-- None --</mat-option>
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class=" arrow-content col-md-2 fs-3 d-sm-none d-md-flex  justify-content-center align-items-center">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </div>
+        <mat-form-field appearance="fill" class="col-lg-5 col-md-5">
+          <mat-label>To</mat-label>
+          <mat-select>
+            <mat-option>-- None --</mat-option>
+            <mat-optgroup *ngFor="let group of pokemonGroups" [label]="group.name">
+              <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
+                {{pokemon.viewValue}}
+              </mat-option>
+            </mat-optgroup>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div class="row py-3 d-flex justify-content-between ">
+        <mat-form-field appearance="fill" class="col-lg-5 col-md-5 ">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="col-lg-5 col-md-5">
+          <mat-label>Time</mat-label>
+          <mat-select>
+            <mat-option disabled class=" text-center">Select Your Time</mat-option>
+            <mat-option class="text-center " *ngFor="let time of times" [value]="time">{{time}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-12 content-price d-flex justify-content-between align-items-center fs-5 fw-bold">
+        <div>Total Price</div>
+        <div>EGY 500.00</div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center pt-5 mt-3">
+        <a class=" text-decoration-none link-content" routerLink="/payment"><button class="btn-content">Confirm
+            Order</button></a>
+      </div>
+
+    </div>
+  </div>
+
+</section>

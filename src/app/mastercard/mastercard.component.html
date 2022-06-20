@@ -1,0 +1,69 @@
+<section class="py-5" id="mastercard">
+  <div class="container py-5">
+    <div class="row content-master py-5">
+      <div class="align-items-center">
+        <div class="col-md-5 col-lg-3 col-sm-7 mx-auto mastercard-img">
+          <img src="../../assets/images/MasterCard_Logo.svg.png" class=" w-100 " alt="mastercard">
+        </div>
+        <div class="col-md-8 mx-auto py-5 mt-3">
+          <form class="example-form" [formGroup]="mastercard">
+            <div class="row">
+              <mat-form-field class="example-full-width col-md-6 " appearance="fill">
+                <mat-label>Card Holder Name</mat-label>
+                <input type="text" matInput formControlName="emailFormControl"
+                  placeholder="">
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="mastercard.get('emailFormControl')?.errors?.['required']">
+                  Card Holder Name is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="mastercard.get('emailFormControl')?.errors?.['maxlength']">
+                  Max length is 16
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width col-md-6 " appearance="fill">
+                <mat-label>Number Card</mat-label>
+                <input maxlength="14" type="number" matInput formControlName="numberform"
+                  placeholder="">
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="mastercard.get('numberform')?.errors?.['required']">
+                  Card Number is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="mastercard.get('numberform')?.errors?.['maxlength']">
+                  Max length is 14
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="row py-md-4">
+              <mat-form-field appearance="fill" class="col-md-6 example-full-width">
+                <mat-label>Expire Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dateform" >
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="mastercard.get('dateform')?.errors?.['required']">
+                <strong>required *</strong>
+                </mat-error>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field class="col-md-6 example-full-width" appearance="fill">
+                <mat-label> Cvv</mat-label>
+                <input matInput #cvv maxlength="3" placeholder="Ex. 94105" formControlName="cvvform" >
+                <mat-hint align="end">{{cvv.value.length}} / 3</mat-hint>
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="mastercard.get('cvvform')?.errors?.['required']">
+                <strong>required *</strong>
+                </mat-error>
+                <mat-error *ngIf="mastercard.get('cvvform')?.errors?.['maxlength']">
+                  Max length is 3
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class=" py-4 text-center">
+              <button type="submit" [disabled]="mastercard.invalid"  class="btn btn-card">Confirm Order</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,63 @@
+.item1 {
+  padding-top: 1.2em;
+}
+input {
+  background-color: rgb(252, 249, 249) !important;
+}
+.signbtn {
+  color: rgb(0, 184, 184);
+  /* text-decoration: none; */
+}
+.signbtn:hover {
+  color: rgb(6, 214, 214);
+  text-decoration: none;
+}
+.lo {
+  background-color: #4864b1;
+}
+.back-img {
+  background-image: url(../../assets/images/login.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+.f-s
+{
+  font-size: 12px;
+}
+
+// .btn-dark1
+// {
+//   background: linear-gradient(90deg,#1199fa,#11d0fa);
+//   text-decoration: none;
+//   border: none;
+// }
+a:visited,
+a,
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  background-color: transparent;
+}
+.bck-ground {
+  background-color: rgb(11, 20, 38);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .example-full-width {
+    width: 60%;
+  }
+}
+
+
+@media screen and (max-width:992px)
+{
+  .back-img{
+    display: none;
+  }
+
+}
+
+

@@ -1,0 +1,28 @@
+.small-content h4 {
+  color: #dc604b;
+  font-weight: bold;
+  font-size: 30px;
+}
+.content-price {
+  padding: 10px 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.btn-content {
+  padding: 15px 60px;
+  border-radius: 5px;
+  background-image: linear-gradient(256deg, #ff6e00, #ff852f);
+  color: white;
+  border: none;
+  box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+}
+.btn-content:hover {
+  background-image: linear-gradient(260deg, #ff6e00, #b15f25);
+}
+
+@media screen and (max-width: 600px) {
+  .arrow-content {
+    display: none;
+  }
+}

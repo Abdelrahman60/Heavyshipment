@@ -1,0 +1,100 @@
+<section class="container-fluid">
+  <div class="row min-vh-100">
+
+    <div class="col-lg-5 wow fadeInUpBig col-md-10 mx-md-auto  mt-5 py-5">
+      <h1 class=" py-3 fw-bold">Sign Up</h1>
+
+      <div *ngIf="error" class=" alert alert-danger">
+        <h6>{{error}}</h6>
+      </div>
+      <form (ngSubmit)="registeruser(registerform)" class="" [formGroup]="registerform">
+        <div class="py-4 row">
+          <div class="col">
+            <input type="text" [class.is-valid]="registerform.get('first_name')?.status=='VALID'" class="form-control"
+              formControlName="first_name" placeholder="First name" aria-label="First name">
+            <div class="wow fadeIn"
+              *ngIf="registerform.get('first_name')?.errors && registerform.get('first_name')?.touched">
+              <mat-error class="f-s px-2 " *ngIf="registerform.get('first_name')?.errors?.['required']">
+                Required</mat-error>
+              <mat-error class="f-s px-2 " *ngIf="registerform.get('first_name')?.errors?.['maxlength']">
+                Max Length is 14</mat-error>
+            </div>
+          </div>
+          <div class="col">
+            <input type="text" [class.is-valid]="registerform.get('last_name')?.status=='VALID'" class="form-control"
+              formControlName="last_name" placeholder="Last name" aria-label="Last name">
+            <div class="wow fadeIn"
+              *ngIf="registerform.get('last_name')?.errors && registerform.get('last_name')?.touched">
+              <mat-error class="f-s px-2 " *ngIf="registerform.get('last_name')?.errors?.['required']">
+                Required</mat-error>
+              <mat-error class="f-s px-2 " *ngIf="registerform.get('last_name')?.errors?.['maxlength']">
+                Max Length is 14</mat-error>
+            </div>
+          </div>
+        </div>
+        <div class="my-1">
+          <input type="email" [class.is-valid]="registerform.get('email')?.status=='VALID'" class="form-control"
+            formControlName="email" id="exampleFormControlInput1" placeholder="Email">
+          <div class="wow fadeIn" *ngIf="registerform.get('email')?.errors && registerform.get('email')?.touched">
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('email')?.errors?.['required']">
+              Required</mat-error>
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('email')?.errors?.['email']">
+              Email Invalid</mat-error>
+          </div>
+        </div>
+        <div id="phone-group">
+          <div class="input-group mt-4">
+            <span class="input-group-text " id="inputGroup-sizing-default">+20</span>
+            <input maxlength="11" [class.is-valid]="registerform.get('phone')?.status=='VALID'" required
+              placeholder="Phone Number" type="tel" formControlName="phone" class="form-control"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
+          </div>
+          <div class="wow fadeIn" *ngIf="registerform.get('phone')?.errors && registerform.get('phone')?.touched">
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('phone')?.errors?.['required']">
+              Required</mat-error>
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('phone')?.errors?.['pattern']">
+              Phone length is exactly 11 </mat-error>
+          </div>
+        </div>
+        <div class="mt-4">
+          <input required [class.is-valid]="registerform.get('password')?.status=='VALID'" placeholder="Password"
+            type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+          <div class="wow fadeIn" *ngIf="registerform.get('password')?.errors && registerform.get('password')?.touched">
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('password')?.errors?.['required']">
+              Required</mat-error>
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('password')?.errors?.['pattern']">
+              Minimum eight in length , At least
+              one uppercase and LowerCase
+            </mat-error>
+          </div>
+        </div>
+
+        <div class=" mt-4">
+          <input required [class.is-valid]="registerform.get('city')?.status=='VALID'"
+            placeholder="City you'll drive in" type="text" formControlName="city" class="form-control"
+            id="exampleInputPassword1">
+          <div class="wow fadeIn" *ngIf="registerform.get('city')?.errors && registerform.get('city')?.touched">
+            <mat-error class="f-s px-2 " *ngIf="registerform.get('city')?.errors?.['required']">
+              Required</mat-error>
+
+          </div>
+        </div>
+        <div>
+          <p class="mt-4 text-muted f-s1">By proceeding, I agree to Noxe's <a href="#"> Terms of Use</a> and acknowledge
+            that I have read
+            the <a href="#"> Privacy Policy.</a></p>
+        </div>
+        <div class=" m-auto text-center mt-4">
+          <button type="submit" [disabled]="registerform.invalid" class="btn login-btn btn-dark w-100">Sign Up</button>
+        </div>
+        <h6 class=" mt-2 mb-3 text-center">Already have an account? <a class="signbtn" routerLink="/login">Sign in</a>
+        </h6>
+      </form>
+    </div>
+
+    <div class="col-lg-7 back-img">
+
+    </div>
+  </div>
+</section>

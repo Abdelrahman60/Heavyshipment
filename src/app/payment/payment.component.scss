@@ -1,0 +1,32 @@
+
+.list-pay
+{
+  // padding: 15px 20px;
+  border-radius: 13px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+  margin-top: 20px;
+  cursor: pointer;
+  border: solid 1px #123075;
+  transition: all 0.5s;
+
+}
+.list-pay:hover
+{
+ transform: translate(10px);
+}
+.list-pay a
+{
+  padding: 15px 20px;
+  color: black;
+}
+
+.list-pay a i
+{
+  color: var(--third-color);
+}
+.list-pay a span
+{
+  font-size: 20px;
+  font-weight: 550;
+  color: #221f3c;
+}

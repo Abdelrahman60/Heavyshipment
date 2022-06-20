@@ -1,0 +1,55 @@
+<nav class=" px-5 py-2 navbar navbar-expand-lg navbar-light bg-secondary fixed-top ">
+  <div class="container-fluid position-relative">
+    <a class="navbar-brand logo" routerLink="home">Noxe</a>
+    <button id="navbar-toggle" class="navbar-toggler" type="button" data-bs-toggle=""
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="ms-5 px-5 bg-white1 navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+        <li class=" nav-item ms-3 ">
+          <a *ngIf="islogin" class="nav-link nav-link1 text-sm-center py-sm-1 " routerLinkActive="active1"
+            aria-current="page" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a *ngIf="islogin" class="nav-link nav-link1 text-sm-center py-sm-1 " routerLinkActive="active1"
+            routerLink="shipping">Shipping</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a *ngIf="islogin" class="nav-link nav-link1 text-sm-center py-sm-1 " routerLinkActive="active1"
+            routerLink="tracking">Tracking</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a *ngIf="islogin" class="nav-link nav-link1 text-sm-center  py-sm-1" routerLinkActive="active1"
+            routerLink="order">Order</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a *ngIf="islogin" class="nav-link nav-link1 text-sm-center py-sm-1" routerLinkActive="active1"
+            routerLink="contact">Contact us</a>
+        </li>
+      </ul>
+      <ul class=" list-unstyled login-xs d-flex justify-content-lg-end justify-content-sm-center ">
+        <li class="px-3"><a *ngIf="!islogin" class="text-sm-center nav-link1 py-sm-1 login " routerLink="login">Log
+            in</a></li>
+        <li class="px-2"><a *ngIf="!islogin" class="text-sm-center nav-link1 py-sm-1 login" routerLink="signup">Sign
+            up</a></li>
+        <div *ngIf="islogin" class="dropdown-1">
+          <i class="fa-solid fa-user user-nav"></i>
+          <div class=" dropdown-menu">
+            <ul>
+              <li class="fon-siz">Welcome: {{userdata.first_name}}</li>
+              <li class="fon-siz">Phone: {{userdata.phone}}</li>
+              <li class="fon-siz">Your City: {{userdata.city}}</li>
+              <li><a (click)="calllogout()" *ngIf="islogin" class="text-sm-center m-auto nav-link1 py-sm-1 login "
+                  routerLink="/">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </ul>
+      <div id="nav-close" class="navClose d-lg-none">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+  </div>
+</nav>

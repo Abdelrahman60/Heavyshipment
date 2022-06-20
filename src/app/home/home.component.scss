@@ -1,0 +1,408 @@
+// start Header
+header {
+  background-image: url(../../assets/images/background.jpeg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.content-landing {
+  color: var(--second-color);
+}
+.content-nav h1 {
+  font-size: 50px;
+}
+.content-nav p {
+  font-size: 30px;
+}
+.header-btn {
+  padding: 17px;
+  border-radius: 50px;
+}
+.header-plus {
+  border-radius: 50%;
+  background-color: #2e384d;
+  padding: 15px 18px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+}
+input::placeholder {
+  color: #bfc4ce;
+  padding-left: 10px;
+}
+header .mouse {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--my-color);
+  bottom: 30px;
+  margin: 0 auto;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.mouse .op {
+  animation: magic-scroll 0.8s infinite alternate;
+}
+.mouse .op1 {
+  animation-delay: 0.4s;
+}
+.mouse .op2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes magic-scroll {
+  0% {
+    opacity: 0.3;
+  }
+  // 70%{
+  //   opacity: 0.7;
+  // }
+  100% {
+    opacity: 1;
+  }
+}
+
+// end Header section
+// start section about
+// content-about
+.content-about h4 {
+  color: var(--my-color);
+}
+.img-about img {
+  border-radius: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+.content-about .p1 {
+  color: var(--second-color);
+}
+.car-up span {
+  color: var(--my-color);
+}
+// end section about
+// start section logisic
+
+.logistic h2 {
+  color: var(--second-color);
+}
+.logistic1 {
+  background-color: #f7f8fb;
+}
+.content-sol h3 {
+  color: var(--third-color);
+  font-weight: 700;
+}
+.dis-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 205px;
+  height: 50px;
+  background-image: linear-gradient(256deg, #ff6e00, #ff852f);
+  border-radius: 5px;
+  box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+}
+.dis-btn span {
+  font-size: 18px;
+}
+.arrow-ani {
+  animation: arrow-animate 1s infinite alternate ease-in;
+}
+@keyframes arrow-animate {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(8px);
+  }
+}
+.content-solu {
+  display: flex;
+  // justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #dddfe7;
+  height: 200px;
+}
+.content-sol1 span {
+  display: flex;
+  color: var(--second-color);
+  font-size: 18px;
+  padding: 15px 0;
+  line-height: 1.17;
+  letter-spacing: -0.5px;
+  text-align: left;
+  font-weight: 700;
+}
+.content-sol1 .sol2 {
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.content-sol2 {
+  color: #1a47b0;
+}
+.lord1 {
+  color: #1a47b0;
+}
+// end section solution
+
+// start tracking section
+#tracking {
+  background-color: #f7f8fb;
+  box-shadow: -50px -50px 50px 0 rgba(159, 159, 159, 0.1);
+}
+.tracking-content .track-main {
+  color: var(--second-color);
+  font-size: 51px;
+  font-weight: bold;
+  line-height: 1.18;
+  letter-spacing: -1.06px;
+}
+.tracking-content p {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #595f6f;
+  padding: 10px 40px;
+}
+.content-img img {
+  background-color: #1a47b0;
+}
+.tracking-a {
+  display: flex;
+  height: 50px;
+  // padding: 20px 165.5px 19.1px 165px;
+  border: solid 1px #fff;
+  background-image: linear-gradient(256deg, #ff6e00, #ff852f);
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+// end tracking section
+
+// start testmionals section
+.testimonals {
+  background: linear-gradient(to bottom, #f7f8fb 83%, 83%, #fff);
+}
+.content-test h3 {
+  color: var(--second-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.item-img img {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 15%;
+}
+.carousel-indicators .slide {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+  background-color: var(--third-color);
+  border-radius: 45%;
+  transition: all 0.4s;
+}
+.item-img h3 {
+  font-size: 20px;
+  line-height: 16px;
+  margin: 0;
+  color: var(--third-color);
+}
+.item-img p {
+  display: block;
+  color: #666;
+  margin-top: 7px;
+  line-height: 1;
+}
+.item-content {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  color: #666;
+}
+
+.carousel-indicators .active {
+  width: 30px;
+  border-radius: 48%;
+}
+// .btn-test {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: auto 0;
+//   box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+//   background-image: linear-gradient(225deg, #123075, #092056);
+// }
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+
+  box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(225deg, #123075, #092056);
+}
+
+// end testminlas section
+
+// ...............................................................................
+// start section counter clients and driver
+
+#counter {
+  background-image: url(../../assets/images/4K-Truck-Wallpaper-UHD.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0078ff;
+  opacity: 0.7;
+}
+.co-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 0px 10px #cde1f8;
+  margin-bottom: 20px;
+}
+.h-size {
+  font-size: 35px;
+  font-weight: 400;
+}
+.f-s {
+  font-size: 30px;
+}
+// end section counter clients and driver
+// start section contact
+.bg-contact {
+  background-color: #f7f8fb;
+}
+.h-contact {
+  color: var(--second-color);
+  font-weight: bold;
+}
+.contect-icon {
+  font-size: 18px;
+}
+.contact-contect {
+  transition: all 0.4s;
+}
+.contact-contect:hover {
+  cursor: pointer;
+  color: var(--my-color);
+}
+
+// end section contact
+
+// .......................... Media Query....................................
+@media screen and (min-width: 1325px) and (max-width: 1475px) {
+  .tracking-content .track-main {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 1075px) and (max-width: 1325px) {
+  .tracking-content .track-main {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1075px) {
+  .tracking-content .track-main {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content-nav h1 {
+    font-size: 40px;
+  }
+  .content-nav p {
+    font-size: 30px;
+  }
+  .content-about h4 {
+    font-size: 20px;
+  }
+
+  .content-about .p1 {
+    font-size: 22px;
+  }
+  .content-about .p3 {
+    font-size: 16px;
+  }
+  .bg-white1 {
+    background-color: white;
+    padding: 20px 0;
+  }
+  .item-img img {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 992px) {
+  .p-counter {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-nav h1 {
+    font-size: 30px;
+  }
+  .content-nav p {
+    font-size: 22px;
+  }
+  .p-counter {
+    font-size: 16px;
+  }
+  .content-about .p3 {
+    font-size: 13px;
+  }
+  .content-about {
+    padding-top: 20px;
+  }
+  .tracking-content .track-main {
+    font-size: 30px;
+  }
+
+  header .mouse {
+    display: none;
+  }
+
+  .login-xs {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .marg-contact {
+    margin: 25px 0;
+  }
+  .input-header
+  {
+    width: 90%;
+  }
+}
+// .......................... End media query ..................................

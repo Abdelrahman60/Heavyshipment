@@ -1,0 +1,36 @@
+.back-img{
+  background-image: url(../../assets/images/login.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+a:visited,
+a,
+a:hover {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:visited {
+  background-color: transparent;
+}
+.f-s
+{
+  font-size: 12px;
+}
+.f-s1
+{
+  font-size: 14px;
+}
+.signbtn:hover {
+  color: rgb(6, 214, 214);
+  text-decoration: none;
+}
+
+@media screen and (max-width:992px)
+{
+  .back-img{
+    display: none;
+  }
+
+}

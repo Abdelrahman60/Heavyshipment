@@ -1,0 +1,75 @@
+*
+{
+  box-sizing: border-box;
+}
+#shipping
+{
+  background-image: url(../../assets/images/shipping.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+.overlay
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color:
+  #707070;
+  opacity: 0.5;
+
+}
+.h2-shipping{
+  color: #d82505;
+  font-weight: 900;
+
+
+}
+.link-shipping
+{
+position: relative;
+margin: auto 0;
+
+
+}
+.link-shipping a
+{
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.3s;
+
+}
+
+.link-shipping a i{
+  // color: #fff;
+  animation: animate-cheveron 0.5s cubic-bezier(0.4, 0, 0.2, 1) infinite  alternate ;
+
+}
+
+.link-shipping::after
+{
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 8px;
+  width: calc(100% - 15px);
+  background-color: #000;
+  height: 4px;
+
+
+}
+@keyframes animate-cheveron {
+  0%{
+    transform: translate(0px);
+
+
+  }
+  100%{
+    transform: translate(8px);
+  }
+
+}

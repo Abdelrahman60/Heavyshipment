@@ -1,0 +1,44 @@
+<section class="container-fluid">
+  <div class="">
+    <div class="row min-vh-100">
+      <div class="col-lg-5   wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+        <div class="group container py-5 mt-5">
+          <h1 class="text-start fw-bold py-5"> Sign In</h1>
+          <form (ngSubmit)="loginuser(logingroup)" class=" m-auto col-md-10 needs-validation" [formGroup]="logingroup" novalidate>
+            <div class="item1">
+
+              <input required placeholder="Your Email" type="email" formControlName="email" class="form-control"
+                id="exampleInputusername" aria-describedby="usernameHelp">
+              <div class="wow fadeIn"
+                *ngIf="logingroup.get('email')?.errors && logingroup.get('email')?.touched">
+                <mat-error class="f-s px-2 " *ngIf="logingroup.get('email')?.errors?.['required']">
+                  Required</mat-error>
+                <mat-error class="f-s px-2 " *ngIf="logingroup.get('email')?.errors?.['email']">
+                  Email Invalid</mat-error>
+              </div>
+            </div>
+            <div class="item1">
+              <input required placeholder="Password" type="password" formControlName="password" class="form-control"
+                id="exampleInputPassword1">
+              <div class="wow fadeIn"
+                *ngIf="logingroup.get('password')?.errors && logingroup.get('password')?.touched">
+                <mat-error class="f-s px-2 " *ngIf="logingroup.get('password')?.errors?.['required']">
+                  Required</mat-error>
+              </div>
+
+            </div>
+            <br>
+            <button type="submit"  [disabled]="logingroup.invalid" class="btn login-btn btn-dark w-100 p-2">LOGIN</button>
+            <p class="text-center py-2">Don't Have An Account yet? <a class="signbtn" routerLink="/signup">Sign up</a>
+            </p>
+          </form>
+
+
+        </div>
+      </div>
+      <div class="col-lg-7 back-img">
+      </div>
+    </div>
+  </div>
+
+</section>

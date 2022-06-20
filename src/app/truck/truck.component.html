@@ -1,0 +1,43 @@
+<section id="truck" class="py-5">
+  <div class="container py-5 ">
+    <div class="row content-truck mt-5 py-4">
+      <h3 class="h2 mb-5 fw-bold">Transportation Cars</h3>
+      <div class="col-lg-4 ">
+        <div class="item label-expand" routerLinkActive="active">
+          <a routerLink="small" class="btn-radio">
+            <div class="content-img">
+              <img class=" w-100" src="../../assets/images/small.jpg" alt="">
+            </div>
+            <span>Small Transport Car</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 content-truck-d1">
+        <div class="item" routerLinkActive="active">
+          <a routerLink="medium">
+            <div class="content-img">
+              <img class=" w-100" src="../../assets/images/Truck-Transparent-Background.png" alt="">
+            </div>
+            <span>Medium Transport Car</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-lg-4 content-truck-d1">
+        <div class="item" routerLinkActive="active">
+          <a routerLink="heavy">
+            <div class="content-img">
+              <img class=" w-100" src="../../assets/images/quon_gk.jpg" alt="">
+            </div>
+            <span>Heavy Transport Car</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-12 mt-5">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+
+</section>

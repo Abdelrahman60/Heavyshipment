@@ -1,0 +1,234 @@
+.logo {
+  letter-spacing: 0.65em;
+  font-size: 30px;
+  font-weight: 800;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo::first-letter {
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--my-color);
+}
+// end logo
+// start Menu
+
+.navbar {
+}
+.user-nav {
+  width: 30px;
+  height: 30px;
+  background-color: var(--my-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.dropdown-1 {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: -25px;
+  top: calc(100% + 0.20rem);
+  transform: translateY(-10px);
+  background-color: white;
+  border-radius: 15px;
+  pointer-events: none;
+  transition: transform 150ms ease-in-out;
+}
+.dropdown-1:hover .dropdown-menu {
+  display: block;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown-menu ul {
+  display: flex;
+  padding: 15px;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-menu ul li {
+  width: 170px;
+  padding: 7px 0px 4px 0px;
+  float: none;
+  display: list-item;
+  text-align: center;
+}
+.dropdown-menu ul .fon-siz{
+  font-size: 17px;
+}
+
+.nav-item {
+  position: relative;
+}
+.nav-item a {
+  color: var(--my-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 0.4s;
+}
+.nav-item a:hover,
+.nav-item a:visited {
+  opacity: 1;
+  color: var(--my-color);
+}
+
+.nav-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--my-color);
+  position: absolute;
+  bottom: -2px;
+  left: 8px;
+  transition: width 0.5s;
+}
+.nav-item:hover::after {
+  width: calc(100% - 25%);
+}
+
+.nav-item .active1 {
+  opacity: 1;
+  color: var(--my-color);
+}
+.active1::before {
+  content: "";
+  width: calc(100% - 25%);
+  height: 2px;
+  opacity: 1;
+  background-color: var(--my-color);
+  position: absolute;
+  bottom: -2px;
+  left: 8px;
+}
+// end Menu
+
+// start in login and signup
+.login {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  border-radius: 7px;
+  color: white;
+  background-color: var(--my-color);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.3s;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login:hover {
+  background-color: var(--my-color);
+  border-style: none;
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1120px) {
+  .nav-item a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bg-white1 {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.5s;
+  }
+  .show-menu {
+    right: 0%;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1.5rem;
+    padding-top: 7rem;
+    font-size: 25px !important;
+  }
+  .login-xs {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navClose {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--my-color);
+    position: absolute;
+    bottom: -1px;
+    left: 35%;
+    transition: width 0.5s;
+  }
+  .nav-item:hover::after {
+    width: calc(100% - 70%);
+  }
+  .nav-item .active1 {
+    opacity: 1;
+    color: var(--my-color);
+  }
+  .active1::before {
+    content: "";
+    width: calc(100% - 70%);
+    height: 2px;
+    opacity: 1;
+    background-color: var(--my-color);
+    position: absolute;
+    bottom: -1px;
+    left: 35%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--my-color);
+    position: absolute;
+    bottom: -1px;
+    left: 35%;
+    transition: width 0.5s;
+  }
+  .nav-item:hover::after {
+    width: calc(100% - 70%);
+  }
+
+  .active1::before {
+    content: "";
+    width: calc(100% - 70%);
+    height: 2px;
+    opacity: 1;
+    background-color: var(--my-color);
+    position: absolute;
+    bottom: -1px;
+    left: 35%;
+  }
+  .nav-item .active1 {
+    opacity: 1;
+    color: var(--my-color);
+  }
+}

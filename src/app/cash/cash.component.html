@@ -1,0 +1,70 @@
+<section class="py-5" id="mastercard">
+  <div class="container py-5">
+    <div class="row content-master py-3">
+      <div class="align-items-center">
+        <div class="col-md-5 col-lg-3 col-sm-7 mx-auto mastercard-img">
+          <img src="../../assets/images/—Pngtree—cash on delivery design with_6371949.png" class="img-fluid" alt="mastercard">
+        </div>
+        <div class="col-md-8 mx-auto py-3 mt-3">
+          <form class="example-form" [formGroup]="cash">
+            <div class="row">
+              <mat-form-field class="example-full-width col-md-6 " appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input type="text" matInput formControlName="nameform"
+                  placeholder="">
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="cash.get('nameform')?.errors?.['required']">
+                  Name is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="cash.get('nameform')?.errors?.['maxlength']">
+                  Max length is 16
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width col-md-6 " appearance="fill">
+                <mat-label>Email</mat-label>
+                <input  type="email" matInput formControlName="emailform"
+                placeholder="pat@example.com">
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="cash.get('emailform')?.errors?.['required']">
+                  Email is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="cash.get('emailform')?.errors?.['email']">
+                  Email not Valid
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="row py-md-4">
+              <mat-form-field class="example-full-width col-md-6" appearance="fill">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+02 &nbsp;</span>
+                <input maxlength="11" type="tel" matInput placeholder="555-555-1234" formControlName="numberform">
+                <mat-icon matSuffix>mode_edit</mat-icon>
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="cash.get('numberform')?.errors?.['required']">
+                  <strong>Required</strong>
+                </mat-error>
+                <mat-error *ngIf="cash.get('numberform')?.errors?.['minLength']">
+                  MinLength is 11
+                 </mat-error>
+              </mat-form-field>
+              <mat-form-field class="col-md-6 example-full-width" appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput #cvv placeholder="" formControlName="addressform" placeholder="Ex. 100 Main St">
+                <mat-hint>Required</mat-hint>
+                <mat-error *ngIf="cash.get('addressform')?.errors?.['required']">
+                <strong>Required</strong>
+                </mat-error>
+
+              </mat-form-field>
+            </div>
+            <div class=" py-4 text-center">
+              <button type="submit" [disabled]="cash.invalid"  class="btn btn-card">Confirm Order</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+

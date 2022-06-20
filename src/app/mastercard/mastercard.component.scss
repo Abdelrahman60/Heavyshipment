@@ -1,0 +1,27 @@
+.content-master
+{
+  color: var(--third-color);
+}
+.btn-card
+{
+  padding: 10px 40px;
+  border-radius: 5px;
+  box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to bottom, #123075, #092056);
+  color: #fff;
+  font-size: 18px;
+}
+@media screen and (max-width:768px) {
+  .example-full-width{
+    padding-top: 10px;
+  }
+
+}
+@media screen and (max-width:576px) {
+  .mastercard-img
+  {
+    width: 70% !important;
+    
+  }
+
+}

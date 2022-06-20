@@ -1,0 +1,38 @@
+#truck {
+  background-color: #f2f2f2;
+}
+
+.content-truck img {
+  height: 300px;
+  transition: all 0.5s;
+}
+
+.content-truck .item {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+.content-img {
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.content-truck h3 {
+  color: #dc604b;
+}
+.item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.content-truck .active {
+  box-shadow: 10px 10px 20px 0 rgba(172, 169, 169, 0.4);
+  transform: scale(1.05);
+}
+@media screen and (max-width: 992px) {
+  .content-truck-d1 {
+    margin-top: 30px;
+  }
+}
